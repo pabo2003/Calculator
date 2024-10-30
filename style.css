@@ -80,9 +80,13 @@ a{
 #display{
     height: 70px;
     width: 100%;
+    border: 2px solid black;
+    margin: 5px;
+    font-size: 20px;
+    background: white;
 }
 
-button , input{
+button{
     height: 60px;
     width: 60px;
     border: 2px solid black;
