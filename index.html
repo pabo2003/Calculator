@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="container">
+    <div class="calculator dark">
+        <div class="display-screen">
+            <div class="display">
+                <input type="text" name="input" id="display">
+            </div>
+        </div>
+        <div class="button">
+            <table>
+                <tr>
+                    <td><button class="btn-operator" id="clear" onclick="input.value" value="AC">AC</button></td>
+                    <td><button class="btn-operator" id="%" onclick="input.value" value="%">%</button></td>
+                    <td><button class="btn-operator" id="backspace" onclick="input.value" value="<"><</button></td>
+                    <td><button class="btn-operator" id="/" onclick="input.value" value="/">/</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn-number" id="7" onclick="input.value" value="7">7</button></td>
+                    <td><button class="btn-number" id="8" onclick="input.value" value="8">8</button></td>
+                    <td><button class="btn-number" id="9" onclick="input.value" value="9">9</button></td>
+                    <td><button class="btn-operator" id="*">*</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn-number" id="4" onclick="input.value" value="4">4</button></td>
+                    <td><button class="btn-number" id="5" onclick="input.value" value="5">5</button></td>
+                    <td><button class="btn-number" id="6" onclick="input.value" value="6">6</button></td>
+                    <td><button class="btn-operator" id="-" onclick="input.value" value="-">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn-number" id="1" onclick="input.value" value="1">1</button></td>
+                    <td><button class="btn-number" id="2" onclick="input.value" value="2">2</button></td>
+                    <td><button class="btn-number" id="3" onclick="input.value" value="3">3</button></td>
+                    <td><button class="btn-operator" id="+" onclick="input.value" value="+">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn-number" id="00" onclick="input.value" value="00">00</button></td>
+                    <td><button class="btn-number" id="0" onclick="input.value" value="0">0</button></td>
+                    <td><button class="btn-operator" id="." onclick="input.value" value=".">.</button></td>
+                    <td><button class="btn-operator" id="equal" onclick="input.value" value="=">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+<script src="lib/jquery-3.7.1.min.js"></script>
+<!--<script src="script.js"></script>-->
+<script>
+    $("#equal").click(function () {
+        display.value = eval($("#display").val());
+    });
+</script>
+</body>
+</html>
